@@ -22,6 +22,7 @@ ext {
 }
 
 repositories {
+    maven {url = "https://dl.bintray.com/qameta/maven-unstable/"}
     mavenCentral()
 }
 
@@ -45,6 +46,7 @@ dependencies {
             "io.appium:java-client:7.3.0",
             "ch.qos.logback:logback-classic:1.2.3",
             "org.aeonbits.owner:owner:1.0.12",
+            "io.qameta.allure:allure-ee-junit-platform:3.28.2",
             "org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
@@ -73,6 +75,7 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
+    systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true'
 }
 
 test {
