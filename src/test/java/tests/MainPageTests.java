@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
@@ -16,6 +17,7 @@ import static io.qameta.allure.Allure.step;
 public class MainPageTests extends TestBase {
 
     @Test
+    @AllureId("1163")
     @Tag("smoke")
     @DisplayName("Проверка, что логотип существует")
     void logoTests() {
